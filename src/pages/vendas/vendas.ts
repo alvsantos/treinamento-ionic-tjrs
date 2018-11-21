@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { VendaPage } from '../venda/venda';
 
 /**
  * Generated class for the VendasPage page.
@@ -21,4 +22,8 @@ export class VendasPage {
     console.log('ionViewDidLoad VendasPage');
   }
 
+  itemSelected(item) {
+    this.navCtrl.push(VendaPage);
+  }
+ 
 }

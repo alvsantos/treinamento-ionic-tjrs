@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { CompraPage } from '../compra/compra';
 
 /**
  * Generated class for the ComprasPage page.
@@ -21,4 +22,8 @@ export class ComprasPage {
     console.log('ionViewDidLoad ComprasPage');
   }
 
+  itemSelected(item) {
+    this.navCtrl.push(CompraPage);
+  }
+ 
 }

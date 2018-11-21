@@ -21,4 +21,8 @@ export class EstoquePage {
     console.log('ionViewDidLoad EstoquePage');
   }
 
+  getItems(filter) { 
+    console.log('getItems EstoquePage', filter);
+  }
+
 }
