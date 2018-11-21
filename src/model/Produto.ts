@@ -13,4 +13,23 @@ export class Produto {
     foto: string;
     compras: Compra[];
     vendas: Venda[];
+
+    static createTableSql() : string {
+        return 'CREATE TABLE IF NOT EXISTS ' + 
+                'Produto(id TEXT PRIMARY KEY,' + 
+                ' titulo TEXT,' + 
+                ' idCategoria TEXT,' + 
+                ' tituloCategoria TEXT,' + 
+                ' descricao TEXT,' + 
+                ' valorUnitario REAL,' + 
+                ' estoqueInicial REAL,' + 
+                ' thumbnail TEXT,' + 
+                ' foto TEXT' +
+                ');';
+    }
+
+    static entityName() {
+        return 'Produto';
+    }
+
 }
