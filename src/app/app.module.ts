@@ -19,6 +19,8 @@ import { ProdutoService } from '../services/ProdutoService';
 import { DatabaseService } from '../services/DatabaseService';
 import { SQLite } from '@ionic-native/sqlite';
 import { SQLiteMock } from '../services/SQLiteMock';
+import { Firebase } from '@ionic-native/firebase';
+import { FcmProvider } from '../providers/fcm';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,9 @@ import { SQLiteMock } from '../services/SQLiteMock';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ProdutoService,
     DatabaseService,
-    { provide: SQLite, useClass: SQLiteMock }
+    { provide: SQLite, useClass: SQLiteMock },
+    Firebase,
+    FcmProvider
 
   ]
 })
