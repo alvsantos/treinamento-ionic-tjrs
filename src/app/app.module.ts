@@ -21,6 +21,7 @@ import { SQLite } from '@ionic-native/sqlite';
 import { SQLiteMock } from '../services/SQLiteMock';
 import { Firebase } from '@ionic-native/firebase';
 import { FcmProvider } from '../providers/fcm';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 @NgModule({
   declarations: [
@@ -62,8 +63,8 @@ import { FcmProvider } from '../providers/fcm';
     DatabaseService,
     { provide: SQLite, useClass: SQLiteMock },
     Firebase,
-    FcmProvider
-
+    FcmProvider,
+    BarcodeScanner
   ]
 })
 export class AppModule {}
